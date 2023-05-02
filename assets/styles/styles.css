@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Karla', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #e5eff5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+p,
+article {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 315px;
+}
+
+.cards__card {
+  padding: 0 20px;
+  width: 100%;
+  min-height: 240px;
+}
+
+.cards .community {
+  background-color: #FFF;
+  border-radius: 5px 5px 0 0;
+  padding-top: 0;
+}
+
+.cards .community h1 {
+  margin: 23px 0;
+  color: #2ab2af;
+  font-size: 18px;
+}
+
+.cards .community p:nth-child(2) {
+  color: #c0df34;
+  font-weight: 700;
+}
+
+.cards .community p:nth-child(3) {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  line-height: 25px;
+  font-size: 14px;
+  color: #98a6bd;
+}
+
+.cards .subscription {
+  background-color: #2ab2af;
+  padding: 20px;
+}
+
+.cards .subscription h2 {
+  padding-top: 5px;
+  font-size: 18px;
+  color: #FFF;
+}
+
+.cards .subscription p:nth-child(2) {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.cards .subscription p:nth-child(2) span {
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e5eff5;
+}
+
+.cards .subscription p:nth-child(3) {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #FFF;
+}
+
+.cards .subscription button {
+  width: 100%;
+  margin: 5px auto;
+  padding: 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: #c0df34;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 0 10px 5px #259d9b;
+  transition: 0.3s;
+}
+
+.cards .subscription button:hover {
+  cursor: pointer;
+  background-color: #a4c21e;
+}
+
+.cards .whyus {
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+  background-color: #2ab2af;
+  filter: brightness(120%);
+}
+
+.cards .whyus h3 {
+  font-size: 18px;
+  color: #FFF;
+}
+
+.cards .whyus ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cards .whyus ul li {
+  margin: 3px 0;
+  font-size: 14px;
+  color: #b6d0e2;
+}
+
+@media screen and (min-width: 1440px) {
+  .cards {
+    width: 650px;
+  }
+  .cards__wrapper {
+    width: 100%;
+    display: flex;
+  }
+  .cards__wrapper article:nth-child(1) {
+    width: 50%;
+  }
+  .cards__wrapper article:nth-child(2) {
+    width: 50%;
+  }
+  .cards__card {
+    min-height: initial;
+    width: 100%;
+  }
+  .cards .community {
+    border-radius: 10px 10px 0 0;
+  }
+  .cards .community h1 {
+    margin-top: 45px;
+    font-size: 25px;
+  }
+  .cards .community p:nth-child(2) {
+    font-size: 19px;
+  }
+  .cards .community p:nth-child(3) {
+    width: 550px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-size: 16px;
+  }
+  .cards .subscription {
+    border-radius: 0 0 0 10px;
+    padding: 35px 40px;
+  }
+  .cards .subscription button {
+    margin-top: 20px;
+  }
+  .cards .whyus {
+    border-radius: 0 0 10px 0;
+    padding: 35px 40px;
+  }
+}

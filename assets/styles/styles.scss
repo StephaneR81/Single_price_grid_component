@@ -1,0 +1,218 @@
+// Variables
+$titles_size: 18px;
+$white:#FFF;
+
+// Colors
+// Primary
+$cyan: hsl(179, 62%, 43%);
+$brightYellow: hsl(71, 73%, 54%);
+
+// Neutral
+$lightGray: hsl(204, 43%, 93%);
+$lighterGray: darken($lightGray, 13%);
+$grayishBlue: hsl(218, 22%, 67%);
+
+// Reset CSS
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: $lightGray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+p,
+article {
+    margin: 0;
+    padding: 0;
+}
+
+// MOBILE
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 315px;
+
+    &__card {
+        padding: 0 20px;
+        width: 100%;
+        min-height: 240px;
+    }
+
+    .community {
+        background-color: $white;
+        border-radius: 5px 5px 0 0;
+        padding-top: 0;
+
+        h1 {
+            margin: 23px 0;
+            color: $cyan;
+            font-size: $titles_size;
+        }
+
+        p:nth-child(2) {
+            color: $brightYellow;
+            font-weight: 700;
+        }
+
+        p:nth-child(3) {
+            margin-top: 15px;
+            margin-bottom: 25px;
+            line-height: 25px;
+            font-size: 14px;
+            color: $grayishBlue;
+        }
+    }
+
+    .subscription {
+        background-color: $cyan;
+        padding: 20px;
+
+        h2 {
+            padding-top: 5px;
+            font-size: $titles_size;
+            color: $white;
+        }
+
+        p:nth-child(2) {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            color: $white;
+            font-size: 30px;
+            font-weight: 700;
+
+            span {
+                padding-left: 15px;
+                font-size: 14px;
+                font-weight: 400;
+                color: $lightGray;
+            }
+        }
+
+        p:nth-child(3) {
+            margin-top: 5px;
+            margin-bottom: 20px;
+            color: $white;
+        }
+
+        button {
+            width: 100%;
+            margin: 5px auto;
+            padding: 14px;
+            border-radius: 5px;
+            border: none;
+            background-color: $brightYellow;
+            color: $white;
+            font-size: 15px;
+            font-weight: 700;
+            box-shadow: 0 0 10px 5px darken($cyan, 5%);
+            transition: 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken($brightYellow, 10%);
+            }
+        }
+    }
+
+    .whyus {
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+        background-color: $cyan;
+        filter: brightness(120%);
+
+        h3 {
+            font-size: $titles_size;
+            color: $white;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                margin: 3px 0;
+                font-size: 14px;
+                color: $lighterGray;
+            }
+        }
+    }
+}
+
+
+
+// DESKTOP
+@media screen and (min-width: 1440px) {
+    .cards {
+        width: 650px;
+
+        &__wrapper {
+            width: 100%;
+            display: flex;
+
+            article:nth-child(1) {
+                width: 50%;
+            }
+
+            article:nth-child(2) {
+                width: 50%;
+            }
+        }
+
+        &__card {
+            min-height: initial;
+            width: 100%;
+        }
+
+        .community {
+            border-radius: 10px 10px 0 0;
+
+            h1 {
+                margin-top: 45px;
+                font-size: 25px;
+            }
+
+            & p:nth-child(2) {
+
+                font-size: 19px;
+            }
+
+            & p:nth-child(3) {
+                width: 550px;
+                margin-top: 10px;
+                margin-bottom: 35px;
+                font-size: 16px;
+            }
+        }
+
+        .subscription {
+            border-radius: 0 0 0 10px;
+            padding: 35px 40px;
+
+            button {
+                margin-top: 20px;
+            }
+        }
+
+        .whyus {
+            border-radius: 0 0 10px 0;
+            padding: 35px 40px;
+        }
+    }
+}
